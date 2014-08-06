@@ -6,11 +6,11 @@ function locateUser(map) {
       map.setView([latitude, longitude], 15);
       var data = {latitude: latitude, longitude: longitude, date: getDateRange()};
       updatePage(data, 'your current location');
-    // }, function () {
-    //   map.setView([41.8893288, -87.63722539999999], 15);
-    //   var data = {latitude: 41.8893288, longitude: -87.63722539999999};
-    //   updatePage(data, 'Dev Bootcamp');
-    // });
+    }, function () {
+      map.setView([41.8893288, -87.63722539999999], 15);
+      var data = {latitude: 41.8893288, longitude: -87.63722539999999};
+      updatePage(data, 'Dev Bootcamp');
+    });
   } 
   // else {
   //   map.setView([41.8893288, -87.63722539999999], 15);
@@ -18,7 +18,7 @@ function locateUser(map) {
   //   updatePage(data, 'Dev Bootcamp');
   // }
 }
-}
+
 
 function addLegend(active_map) {
   if ($('.next').length > 0) {
