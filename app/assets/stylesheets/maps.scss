@@ -5,6 +5,16 @@
   padding-right: 10px;
   float: left;
   margin-top: 0em;
+
+}
+
+h1 {
+  text-align: center;
+  background: transparentize(white, 0.5);
+
+  position: absolute;
+  font-size: 12em;
+  z-index: 9;
 }
 
 .legend {

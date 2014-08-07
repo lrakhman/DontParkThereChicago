@@ -1,4 +1,8 @@
-<div id="active_map" class="active_map"></div>
+<div id="active_map" class="active_map">
+  <div class="overlay">
+    <h1>THIS IS AN OVERLAY</h1>
+  </div>
+</div>
 <script>
   $(document).ready(function() {
     var map = L.map('active_map').setView([<%= lat %>, <%= long %>], 15);
