@@ -1,12 +1,12 @@
-<%= render 'refills/navigation'%>
+<%# render 'refills/navigation'%>
 
-<div id='bottom'>
+<!-- <div id='bottom'>
   <main role = "main" class = "row">
-    <article class = "col span_8 clr">
+    <article class = "col span_8 clr"> -->
       <div id="active_map" class="active_map"></div>
-    </article>
+<!--     </article> -->
 
-    <aside role="complementary" class = "col span_4 clr">
+<!--     <aside role="complementary" class = "col span_4 clr">
       <div class='cleaning_col'>
         <div class = 'next'>
           <p><%= image_tag('712.GIF', id: 'spinner') %></p>
@@ -20,21 +20,19 @@
           </div>
         </div>     
       </div>
-    </aside>
+    </aside> -->
   <script>
     active_map = L.map('active_map').setMaxBounds([[41.644286, -87.940101], [42.023135, -87.523661]]).setView([41.8893288, -87.63722539999999], 13);
     var legend = L.control({position: 'bottomright'});
     addLegend(active_map)
-    L.tileLayer('http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-          '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-          'Imagery © <a href="http://mapbox.com">Mapbox</a>', id: 'examples.map-i86knfo3'}).addTo(active_map);
+    L.tileLayer('https://{s}.tiles.mapbox.com/v3/examples.map-51f69fea/{z}/{x}/{y}.png').addTo(active_map);
     $(document).ready(function() {
 
       $(".modal3_div").hide();
       locateUser(active_map);
     });
   </script>
-
+<!-- 
   
     <div class = "next_days">
       <h3>Search by Date</h3>
@@ -49,10 +47,10 @@
 
     </div>
 
-</div>
+</div> -->
 
-<%= render 'refills/footer2' %>
-<button id= "toggle">&#x25B2</button>
+<%# render 'refills/footer2' %>
+<!-- <button id= "toggle">&#x25B2</button>
 <div id = "mobile">
   <div class = 'next'>
     <p></p>
@@ -73,4 +71,4 @@
     <div class = "monthly_schedule">
     </div>
   </div> 
-</div>
+</div> -->
