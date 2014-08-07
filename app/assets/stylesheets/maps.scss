@@ -8,6 +8,11 @@
 
 }
 
+#locate {
+  @include button(simple, blue);
+  z-index: 9;
+}
+
 h1 {
   text-align: center;
   background: transparentize(white, 0.5);
