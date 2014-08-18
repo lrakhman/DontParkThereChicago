@@ -1,10 +1,11 @@
-<div id="active_map" class="active_map"></div>
+<div id="active_map" class="active_map">
+    <h1>THIS IS AN OVERLAY</h1>
+    <div id="locate"></div>
+</div>
 <script>
   $(document).ready(function() {
     var map = L.map('active_map').setView([<%= lat %>, <%= long %>], 15);
-    L.tileLayer('http://{s}.tiles.mapbox.com/v3/{id}/{z}/{x}/{y}.png', {attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, ' +
-        '<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
-        'Imagery © <a href="http://mapbox.com">Mapbox</a>', id: 'examples.map-i86knfo3'}).addTo(map);
+    L.tileLayer('https://{s}.tiles.mapbox.com/v3/examples.map-51f69fea/{z}/{x}/{y}.png').addTo(map);
     <% regions[0].each do |region| %>
       region = <%= region.html_safe %>;
       draw_red(region, map);

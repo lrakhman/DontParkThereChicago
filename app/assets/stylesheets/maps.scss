@@ -1,11 +1,25 @@
 #active_map {
-  @include size(100% 600px);
+  @include size(100% 800px);
   @include position(relative auto);
   margin: 0;
   padding-right: 10px;
   float: left;
   margin-top: 0em;
-  height: 550px;
+
+}
+
+#locate {
+  @include button(simple, blue);
+  z-index: 9;
+}
+
+h1 {
+  text-align: center;
+  background: transparentize(white, 0.5);
+
+  position: absolute;
+  font-size: 12em;
+  z-index: 9;
 }
 
 .legend {

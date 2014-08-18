@@ -8,7 +8,7 @@ function draw_red(region) {
       for(var i=0; i<coords.length; i++) {
         polygonCoords.push([coords[i][1], coords[i][0]]);
       }
-      array.push(L.polygon(polygonCoords, {color: 'red'}));
+      array.push(L.polygon(polygonCoords, {color: '#B71B15'}));
     } else {
       for (var k=0; k< coords.length; k++) {
         coords2 = coords[k];
@@ -16,7 +16,7 @@ function draw_red(region) {
         for(var i=0; i<coords2.length; i++) {
           polygonCoords.push([coords2[i][1], coords2[i][0]]);
         }
-        array.push(L.polygon(polygonCoords, {color: 'red'}));
+        array.push(L.polygon(polygonCoords, {color: '#B71B15'}));
       }
     }
   }
@@ -33,7 +33,7 @@ function draw_green(region, map) {
       for(var i=0; i<coords.length; i++) {
         polygonCoords.push([coords[i][1], coords[i][0]]);
       }
-      array.push(L.polygon(polygonCoords, {color: 'green'}));
+      array.push(L.polygon(polygonCoords, {color: '#58B03B'}));
     } else {
       for (var k=0; k< coords.length; k++) {
         coords2 = coords[k];
@@ -41,7 +41,7 @@ function draw_green(region, map) {
         for(var i=0; i<coords2.length; i++) {
           polygonCoords.push([coords2[i][1], coords2[i][0]]);
         }
-        array.push(L.polygon(polygonCoords, {color: 'green'}));
+        array.push(L.polygon(polygonCoords, {color: '#58B03B'}));
       }
     }
   }
