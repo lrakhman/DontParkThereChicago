@@ -1,22 +1,20 @@
+body, html {
+  @include size(100% 100%)
+}
+
 #active_map {
-  @include size(100% 800px);
+  @include size(100% 100%);
   @include position(relative auto);
   margin: 0;
   padding-right: 10px;
   float: left;
   margin-top: 0em;
-
-}
-
-#locate {
-  @include button(simple, blue);
-  z-index: 9;
 }
 
 h1 {
   text-align: center;
   background: transparentize(white, 0.5);
-
+  @include size(100% auto); 
   position: absolute;
   font-size: 12em;
   z-index: 9;

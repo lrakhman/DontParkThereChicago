@@ -1,12 +1,10 @@
-<%# render 'refills/navigation'%>
+<%= render 'navbar'%>
 
 <!-- <div id='bottom'>
   <main role = "main" class = "row">
     <article class = "col span_8 clr"> -->
       <div id="active_map" class="active_map">
-          <h1>THIS IS AN OVERLAY
-            <div id="locate"></div>
-          </h1>
+          <h1>Park It,<br> Chicago</h1>
       </div>
 <!--     </article> -->
 
@@ -30,6 +28,7 @@
     var legend = L.control({position: 'bottomright'});
     addLegend(active_map)
     L.tileLayer('https://{s}.tiles.mapbox.com/v3/examples.map-51f69fea/{z}/{x}/{y}.png').addTo(active_map);
+    L.control.fullscreen().addTo(active_map);
     $(document).ready(function() {
 
       $(".modal3_div").hide();
