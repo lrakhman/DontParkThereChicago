@@ -7,14 +7,12 @@ header.navigation {
   $navigation-color-hover: #58B03B;
   $horizontal-bar-mode: $large-screen;
 
-  @include media ($horizontal-bar-mode) {
-	  background-color: $navigation-background;
-	  height: $navigation-height;
-	  font-family: 'Bree Serif', serif;
-	  position: relative;
-	  z-index: 1;
-	  display: none;
-  }
+  background-color: $navigation-background;
+  height: $navigation-height;
+  font-family: 'Bree Serif', serif;
+  position: relative;
+  z-index: 1;
+  display: none;
 
   .navigation-wrapper {
     @include clearfix;
@@ -23,72 +21,56 @@ header.navigation {
   }
 
   .nav {
-
-    @include media ($horizontal-bar-mode) {
-      float: left;
-      width: 100%;
-    }
+    float: left;
+    width: 100%;
   }
 
   ul#navigation-menu {    
-    
-    @include media ($horizontal-bar-mode) {
-	    -webkit-transform-style: preserve-3d;
-	    clear: both;
-	    overflow: visible;
-	    float: right;
-	    height: $navigation-height;
-	    background-color: #4b4b4b;
-      display: inline;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: transparent;
-    }
+    -webkit-transform-style: preserve-3d;
+    clear: both;
+    overflow: visible;
+    float: right;
+    height: $navigation-height;
+    background-color: #4b4b4b;
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
   }
 
   ul li.nav-link {
-    @include media ($horizontal-bar-mode) {
-	    float: none;
-	    overflow: hidden;
-	    padding-right: .8em;
-	    text-align: right;
-      background: transparent;
-      display: inline;
-      line-height: $navigation-height;
-      text-decoration: none;
-      width: auto;
-    }
+    float: none;
+    overflow: hidden;
+    padding-right: .8em;
+    text-align: right;
+    background: transparent;
+    display: inline;
+    line-height: $navigation-height;
+    text-decoration: none;
+    width: auto;
 
     a {
-      @include media ($horizontal-bar-mode) {
-	      color: $navigation-color;
-	      display: inline-block;
-	      font-weight: 500;
-	      font-size: 1.5em;
-        padding-right: 1em;
-        padding-left: 1em;
-        
-        &:hover {
-          color: $navigation-color-hover;
-        }
+      color: $navigation-color;
+      display: inline-block;
+      font-weight: 500;
+      font-size: 1.5em;
+      padding-right: 1em;
+      padding-left: 1em;
+      
+      &:hover {
+        color: $navigation-color-hover;
       }
     }
   }
 
   li.right.nav-link {
-
-    @include media($horizontal-bar-mode) {
-      float: right;
-    }
+    float: right;
   }
 
   .ion-ios7-search-strong:before {
-  	
-  	@include media($horizontal-bar-mode) {
-  		font-size: 2em;
-  		vertical-align: middle;
-  		padding-bottom: 10px;
-  	}
+		font-size: 2em;
+		vertical-align: middle;
+		padding-bottom: 10px;
   }
 }
