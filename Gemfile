@@ -6,6 +6,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'bitters'
 gem 'refills'
+gem 'jquery-ui-rails'
 
 gem 'twilio-ruby'
 gem 'oauth'
