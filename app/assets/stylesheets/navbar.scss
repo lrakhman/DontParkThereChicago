@@ -14,14 +14,6 @@ header.navigation {
   z-index: 1;
   display: none;
 
-  &.active {
-  	display: block;
-  }
-
-  @include media ($horizontal-bar-mode) {
-    min-width: 910px;
-  }
-
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
@@ -29,83 +21,56 @@ header.navigation {
   }
 
   .nav {
-    float: none;
-
-    @include media ($horizontal-bar-mode) {
-      float: left;
-      width: 100%;
-    }
+    float: left;
+    width: 100%;
   }
 
   ul#navigation-menu {    
     -webkit-transform-style: preserve-3d;
     clear: both;
-    display: none;
-    margin: 0 auto;
     overflow: visible;
-    padding: 0;
     float: right;
-    width: 50%;
     height: $navigation-height;
     background-color: #4b4b4b;
-
-    @include media ($horizontal-bar-mode) {
-      display: inline;
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      background-color: transparent;
-    }
+    display: inline;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: transparent;
   }
 
   ul li.nav-link {
     float: none;
-    background: $navigation-background;
-    display: block;
-    line-height: $navigation-height;
     overflow: hidden;
     padding-right: .8em;
     text-align: right;
-    width: 100%;
-
-    @include media ($horizontal-bar-mode) {
-      background: transparent;
-      display: inline;
-      line-height: $navigation-height;
-      text-decoration: none;
-      width: auto;
-    }
+    background: transparent;
+    display: inline;
+    line-height: $navigation-height;
+    text-decoration: none;
+    width: auto;
 
     a {
       color: $navigation-color;
       display: inline-block;
       font-weight: 500;
       font-size: 1.5em;
-
-      @include media ($horizontal-bar-mode) {
-        padding-right: 1em;
-        padding-left: 1em;
-        
-        &:hover {
-          color: $navigation-color-hover;
-        }
+      padding-right: 1em;
+      padding-left: 1em;
+      
+      &:hover {
+        color: $navigation-color-hover;
       }
     }
   }
 
   li.right.nav-link {
-
-    @include media($horizontal-bar-mode) {
-      float: right;
-    }
+    float: right;
   }
 
   .ion-ios7-search-strong:before {
-  	
-  	@include media($horizontal-bar-mode) {
-  		font-size: 2em;
-  		vertical-align: middle;
-  		padding-bottom: 10px;
-  	}
+		font-size: 2em;
+		vertical-align: middle;
+		padding-bottom: 10px;
   }
 }

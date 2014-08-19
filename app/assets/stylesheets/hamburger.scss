@@ -22,9 +22,9 @@ $translateX: 0;
   z-index: 1;
 
   #hamburger-icon {
-    width: $width-line;
-    height: $height-icon;
+    @include size(100% 100%);
     position: relative;
+    color: $color;
     display: block;
     margin: 0 auto;
     
@@ -34,20 +34,26 @@ $translateX: 0;
       width: $width-line;
       height: $height-line;
       position: absolute;
-      left: 0;
+      left: 16%;
       border-radius: ($height-line / 2);
       transition: all $transition-time;
       -webkit-transition: all $transition-time;
       -moz-transition: all $transition-time;
       
       &.line-1 {
-        top: 50%;
+        top: 10%;
       }
       &.line-2 {
-        top: 100%;
+        top: 30%;
       }
       &.line-3 {
-        top: 150%;
+        top: 50%;
+      }
+      &.menu-text {
+        background: none;
+        position: relative;
+        top: 60%;
+        left: 10%;
       }
     }
     &:hover, &:focus {
