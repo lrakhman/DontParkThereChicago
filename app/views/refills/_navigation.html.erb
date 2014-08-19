@@ -1,26 +1,17 @@
-<header role = "banner" class = "row" style = "margin-top: -2.5%">
-  <nav role="navigation" class = "row">
-    <header class="navigation" id = "first">
-      <div class="menu-wrapper"> 
-        <div class="navigation-tools">
-          <h3></h3>
-          <div class = 'left-col'><a href="/"><%= image_tag('sweep.png', id: 'sweep') %><h3 id="profile_title">HOME</h3></a></div>
-          <div class="search-bar">
-            <div class="search-and-submit">
-              <% unless  @profile_page %>
-                <input id = "lower_address" type="search" placeholder="Enter Street Address" />
-                <button id = "lower_address_submit" type="submit">
-                  <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
-                </button>
-              <% else %>
-                <h2 id="profile_title">Your Profile Page</h2>
-              <% end %>
-        </div>
-
-      </div>
-      <div class = 'right-col'>
-        <% unless current_user %>
-          <a href="javascript:void(0)" class="login">
+<header class="navigation">
+  <nav>
+    <a href="/"><h3 id="profile_title">HOME</h3></a></div>
+    <div class="search-bar">
+      <% unless  @profile_page %>
+        <input id = "lower_address" type="search" placeholder="Enter Street Address" />
+        <button id = "lower_address_submit" type="submit">
+          <img src="https://raw.githubusercontent.com/Magnus-G/Random/master/search-icon.png" alt="">
+        </button>
+      <% else %>
+        <h2 id="profile_title">Your Profile Page</h2>
+      <% end %>
+      <% unless current_user %>
+        <a href="javascript:void(0)" class="login">
           <div class="modal">
             <label for="modal-1">
               <div id = "login_link" style = 'color: white'>Log In</div>
@@ -34,27 +25,11 @@
             </div>
           </div>
         </a>
-        <% else %>       
-          <%= link_to "Profile", user_path(current_user), :class => 'nav_button2' %>
-      
-          <%= link_to "Log Out", destroy_user_session_path, :method => :delete, :class => 'nav_button2' %>
-        <% end %>
-      </div>
-      </div>    
-    </header>
+      <% else %>       
+        <%= link_to "Profile", user_path(current_user), :class => 'nav_button2' %>
+
+        <%= link_to "Log Out", destroy_user_session_path, :method => :delete, :class => 'nav_button2' %>
+      <% end %>
+    </div> 
   </nav>
-</header>
-
-<header role = "banner" class = "row" style = 'height: 50px'>
-
-<nav role="navigation" class = "row">
-  <header class="navigation">
-    <div class="lower-menu">
-    <div class = 'left-col'></div>
-      <p><em>Everything you need to know about street sweeping in Chicago.</em></p>
-    <div class = 'right-col'></div>
-    </div>
-  </header>
-</nav>
-
 </header>

@@ -4,11 +4,14 @@ body, html {
 
 #active_map {
   @include size(100% 100%);
-  @include position(relative auto);
+  position: absolute;
   margin: 0;
-  padding-right: 10px;
-  float: left;
-  margin-top: 0em;
+  top: 0;
+
+  &.active {
+    margin-top: 60px;
+    height: 93%;
+  }
 }
 
 h1 {
