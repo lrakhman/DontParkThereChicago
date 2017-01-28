@@ -1,5 +1,12 @@
 class NotificationsController < ApplicationController
-  
+  def index
+    "new code here"
+  end
+
+  def delete
+    "some stuff here"
+  end
+
   def create
     email = params[:notification][:email]
     phone = params[:notification][:phone]
@@ -14,13 +21,4 @@ class NotificationsController < ApplicationController
     end
  		render plain: "Notification will be sent."
   end
-
-  def destroy
-    notification = Notification.find(params[:id])
-    notification.destroy
-    render plain: "Success"
-  end
 end
-
-
-   
